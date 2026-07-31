@@ -1,90 +1,123 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Krishna Message</title>
 
 <style>
-body{
+*{
 margin:0;
+padding:0;
+box-sizing:border-box;
 font-family:Arial,sans-serif;
-background:#fff8e7;
+}
+
+body{
+background:linear-gradient(135deg,#ff9933,#ffd54f,#fff8e1);
 text-align:center;
 color:#222;
 }
-.header{
-background:#ff9800;
-padding:20px;
-color:white;
-}
+
 .container{
+max-width:500px;
+margin:auto;
+padding:25px;
+}
+
+h1{
+font-size:38px;
+color:#d84315;
+margin-top:20px;
+}
+
+.subtitle{
+font-size:18px;
+margin:15px 0 25px;
+}
+
+.card{
+background:white;
 padding:20px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
-img{
+
+.qr{
 width:280px;
-max-width:90%;
+max-width:100%;
 border-radius:15px;
-box-shadow:0 0 10px rgba(0,0,0,.2);
+margin:15px 0;
 }
-.btn{
-display:inline-block;
-margin:10px;
-padding:14px 28px;
-background:#ff5722;
+
+.upi{
+font-size:20px;
+font-weight:bold;
+color:#0d47a1;
+word-break:break-all;
+}
+
+.button{
+display:block;
+width:100%;
+padding:16px;
+margin-top:15px;
+background:#ff6f00;
 color:white;
 text-decoration:none;
-border-radius:8px;
 font-size:18px;
+font-weight:bold;
+border-radius:12px;
 }
+
 .youtube{
 background:#e62117;
 }
+
 .footer{
 margin-top:30px;
 padding:20px;
-background:#222;
-color:white;
+font-size:15px;
 }
 </style>
+
 </head>
 
 <body>
 
-<div class="header">
-<h1>🙏 Krishna Message 🙏</h1>
-<p>Support our spiritual mission</p>
-</div>
-
 <div class="container">
 
-<h2>Donate via UPI</h2>
+<h1>🙏 Krishna Message 🙏</h1>
 
-<p><b>UPI ID:</b></p>
+<p class="subtitle">
+Support our spiritual mission by donating.
+Every contribution helps us create more spiritual content.
+</p>
 
-<h3>aditikumari0365@okicici</h3>
+<div class="card">
 
-<p>Please scan the QR Code below</p>
+<img src="qr.png" class="qr">
 
-<img src="qr.png">
+<p class="upi">
+UPI ID<br>
+aditikumari0365@okicici
+</p>
 
-<br><br>
-
-<a class="btn" href="upi://pay?pa=aditikumari0365@okicici">
-Donate Now
+<a class="button" href="upi://pay?pa=aditikumari0365@okicici">
+❤️ Donate Now
 </a>
 
-<br>
-
-<a class="btn youtube"
+<a class="button youtube"
 href="https://youtube.com/@krishnamessage108">
-Visit YouTube Channel
+▶ Visit YouTube Channel
 </a>
 
 </div>
 
 <div class="footer">
-© Krishna Message
+Thank you for your love and support ❤️
+</div>
+
 </div>
 
 </body>
