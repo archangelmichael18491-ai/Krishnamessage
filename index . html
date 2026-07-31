@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishna Message</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="hero">
+
+<img src="krishna.jpg" class="hero-image" alt="Lord Krishna">
+
+<div class="hero-overlay">
+
+<div class="badge">
+🦚 HARE KRISHNA
+</div>
+
+<h1>Krishna Message</h1>
+
+<p>
+Support our spiritual mission with your donation.
+Every contribution helps spread Lord Krishna's teachings.
+</p>
+
+</div>
+
+</header>
+
+<div class="card">
+
+<h2 class="scan-title">
+📱 SCAN & DONATE
+</h2>
+
+<div class="qr-box">
+
+<img src="qr.png" alt="UPI QR">
+
+</div>
+
+<div class="upi-box">
+
+<span>UPI ID</span>
+
+<h2>
+aditikumari0365@okicici
+</h2>
+
+<button onclick="copyUPI()">
+📋 Copy UPI
+</button>
+  </div>
+
+<a class="donate"
+href="upi://pay?pa=aditikumari0365@okicici">
+
+❤️ Donate Now
+
+</a>
+
+<a class="youtube"
+href="https://youtube.com/@krishnamessage108"
+target="_blank">
+
+▶ Visit YouTube Channel
+
+</a>
+
+</div>
+
+<div class="features">
+
+<div class="feature">
+
+<h3>🔒 100% Secure</h3>
+
+<p>
+Your donation is safe and secure.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🙏 Your Support</h3>
+
+<p>
+Helps us create more Krishna content.
+</p>
+
+</div>
+
+<div class="feature">
+
+<h3>🦚 Blessings</h3>
+
+<p>
+May Lord Krishna bless you always.
+</p>
+
+</div>
+
+</div>
+
+<footer>
+
+🙏 Thank You For Your Love & Support ❤️
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
