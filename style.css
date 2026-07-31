@@ -1,0 +1,487 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#071224;
+overflow-x:hidden;
+color:#fff;
+}
+
+.background{
+position:fixed;
+width:100%;
+height:100%;
+background:
+radial-gradient(circle at top,#ffb30022,transparent 35%),
+linear-gradient(180deg,#08152b,#0f2345,#08152b);
+z-index:-1;
+}
+
+.container{
+width:100%;
+max-width:470px;
+margin:auto;
+padding:20px;
+}
+
+.hero{
+position:relative;
+border-radius:28px;
+overflow:hidden;
+box-shadow:0 20px 40px rgba(0,0,0,.35);
+}
+
+.hero-image{
+width:100%;
+height:340px;
+object-fit:cover;
+display:block;
+}
+
+.overlay{
+position:absolute;
+left:0;
+right:0;
+bottom:0;
+padding:30px;
+background:linear-gradient(transparent,rgba(0,0,0,.88));
+}
+
+.overlay h1{
+font-size:34px;
+font-weight:700;
+color:#FFD54F;
+}
+
+.overlay p{
+margin-top:8px;
+font-size:18px;
+color:#fff;
+}
+
+.card{
+margin-top:-30px;
+background:#fff;
+color:#222;
+border-radius:28px;
+padding:25px;
+box-shadow:0 18px 40px rgba(0,0,0,.3);
+position:relative;
+z-index:10;
+}
+
+.scan-title{
+background:#0c2f67;
+color:#fff;
+padding:14px;
+font-size:22px;
+font-weight:700;
+border-radius:16px;
+text-align:center;
+margin-bottom:20px;
+}
+
+.qr-box{
+text-align:center;
+}
+
+.qr-box img{
+width:250px;
+max-width:100%;
+background:#fff;
+padding:10px;
+border-radius:20px;
+border:5px solid #f4d27a;
+}
+
+.upi-box{
+margin-top:22px;
+text-align:center;
+}
+
+.upi-box span{
+font-size:14px;
+color:#666;
+}
+
+.upi-box h2{
+margin:8px 0 18px;
+font-size:20px;
+word-break:break-word;
+}
+
+.upi-box button{
+width:100%;
+padding:15px;
+background:#2962ff;
+color:#fff;
+border:none;
+border-radius:14px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.upi-box button:hover{
+transform:translateY(-2px);
+}
+
+.donate,
+.youtube{
+display:block;
+text-align:center;
+text-decoration:none;
+padding:16px;
+margin-top:15px;
+border-radius:16px;
+font-size:20px;
+font-weight:700;
+transition:.3s;
+}
+
+.donate{
+background:#ff9800;
+color:#fff;
+}
+
+.youtube{
+background:#e60000;
+color:#fff;
+}
+
+.donate:hover,
+.youtube:hover{
+transform:translateY(-3px);
+box-shadow:0 12px 24px rgba(0,0,0,.25);
+}
+
+.features{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:12px;
+margin-top:25px;
+}
+
+.box{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.1);
+border-radius:18px;
+padding:18px;
+text-align:center;
+backdrop-filter:blur(10px);
+}
+
+.box i{
+font-size:28px;
+color:#FFD54F;
+margin-bottom:12px;
+}
+
+.box h3{
+font-size:18px;
+margin-bottom:8px;
+}
+
+.box p{
+font-size:13px;
+color:#ddd;
+}
+
+footer{
+text-align:center;
+padding:30px 10px;
+font-size:18px;
+font-weight:600;
+color:#FFD54F;
+}
+
+@media(max-width:480px){
+
+.features{
+grid-template-columns:1fr;
+}
+
+.overlay h1{
+font-size:28px;
+}
+
+.overlay p{
+font-size:16px;
+}
+
+.scan-title{
+font-size:18px;
+}
+
+.upi-box h2{
+font-size:17px;
+}
+
+}
+
+.toast{
+position:fixed;
+bottom:30px;
+left:50%;
+transform:translateX(-50%);
+background:#1a1a1a;
+color:#fff;
+padding:14px 22px;
+border-radius:12px;
+opacity:0;
+transition:.3s;
+z-index:9999;
+font-weight:600;
+}
+
+.toast.show{
+opacity:1;
+}
+
+.hero,
+.card,
+.box{
+opacity:0;
+transform:translateY(40px);
+transition:.8s;
+}
+
+.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+.pulse{
+animation:pulse .8s;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.05);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* Floating Stars */
+
+.floating-stars{
+position:fixed;
+width:100%;
+height:100%;
+left:0;
+top:0;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.floating-stars span{
+position:absolute;
+width:5px;
+height:5px;
+background:#FFD54F;
+border-radius:50%;
+animation:float 10s linear infinite;
+opacity:.7;
+}
+
+.floating-stars span:nth-child(1){left:10%;animation-delay:0s;}
+.floating-stars span:nth-child(2){left:22%;animation-delay:2s;}
+.floating-stars span:nth-child(3){left:35%;animation-delay:5s;}
+.floating-stars span:nth-child(4){left:50%;animation-delay:1s;}
+.floating-stars span:nth-child(5){left:66%;animation-delay:3s;}
+.floating-stars span:nth-child(6){left:78%;animation-delay:6s;}
+.floating-stars span:nth-child(7){left:88%;animation-delay:4s;}
+.floating-stars span:nth-child(8){left:96%;animation-delay:7s;}
+
+@keyframes float{
+0%{
+transform:translateY(100vh) scale(.5);
+opacity:0;
+}
+30%{
+opacity:1;
+}
+100%{
+transform:translateY(-100px) scale(1.3);
+opacity:0;
+}
+}
+
+/* Hero Badge */
+
+.hero-badge{
+position:absolute;
+top:20px;
+left:20px;
+background:rgba(255,215,0,.9);
+color:#222;
+padding:10px 18px;
+border-radius:30px;
+font-weight:700;
+font-size:15px;
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+}
+
+/* Premium Card Glow */
+
+.card{
+border:2px solid rgba(255,215,0,.25);
+}
+
+.card:hover{
+box-shadow:
+0 0 20px rgba(255,193,7,.35),
+0 0 45px rgba(255,193,7,.25);
+transition:.4s;
+}
+
+/* Premium Buttons */
+
+.donate{
+background:linear-gradient(45deg,#ff9800,#ff5722);
+}
+
+.youtube{
+background:linear-gradient(45deg,#ff0000,#b80000);
+}
+
+/* Premium Payment Card */
+
+.payment-card{
+
+margin-top:25px;
+
+padding:22px;
+
+border-radius:20px;
+
+background:linear-gradient(135deg,#132d58,#1e4d8f);
+
+color:#fff;
+
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+.payment-title{
+
+font-size:24px;
+
+font-weight:700;
+
+margin-bottom:20px;
+
+text-align:center;
+
+color:#FFD54F;
+
+}
+
+.payment-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:12px 0;
+
+border-bottom:1px solid rgba(255,255,255,.12);
+
+}
+
+.payment-row:last-child{
+
+border:none;
+
+}
+
+/* Golden Glow */
+
+.hero::after{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+left:0;
+
+top:0;
+
+box-shadow:inset 0 0 120px rgba(255,193,7,.35);
+
+pointer-events:none;
+
+}
+
+/* Glass Effect */
+
+.box{
+
+backdrop-filter:blur(20px);
+
+}
+
+/* Button Hover */
+
+.donate:hover{
+
+transform:scale(1.03);
+
+}
+
+.youtube:hover{
+
+transform:scale(1.03);
+
+}
+
+/* Hero Image Animation */
+
+.hero-image{
+
+animation:zoom 12s infinite alternate;
+
+}
+
+@keyframes zoom{
+
+0%{
+
+transform:scale(1);
+
+}
+
+100%{
+
+transform:scale(1.08);
+
+}
+
+}
+
+.activeHero{
+
+filter:drop-shadow(0 0 25px gold);
+
+transition:.8s;
+
+}
